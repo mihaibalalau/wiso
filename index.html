@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>
+        Open canvas
+    </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&amp;family=Inter&amp;family=Poppins&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            user-select: none;
+            font-family: 'Poppins';
+        }
+
+        :root {
+            font-size: 10px;
+        }
+
+        /* #main {
+            background-color: hsl(197, 65%, 30%);
+        } */
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #toolbar {
+            position: fixed;
+            display: flex;
+            flex-flow: column nowrap;
+            min-width: 50px;
+            min-height: 50px;
+            transform: translate(-50%, -50%);
+            left: 60px;
+            top: 50%;
+            opacity: .2;
+            transition: opacity .3s ease-in-out;
+        }
+
+        #toolbar:hover {
+            transition: opacity 0s;
+            opacity: 1;
+        }
+
+
+        #toolbar .button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            opacity: .4;
+            background-color: hsla(0, 50%, 100%, 1);
+            transition: .3s ease-in-out;
+        }
+
+        #toolbar .button:hover {
+            transition: opacity 0s;
+            opacity: 1;
+        }
+
+        .header {
+            background-color: hsla(0, 50%, 20%, 1);
+            color: white;
+            max-width: 100%;
+            height: 40px;
+        }
+
+        .draggable {
+            cursor: pointer;
+        }
+
+        #command-input {
+            background-color: white;
+            /* background-color: transparent; */
+            outline: none;
+            border: none;
+            width: 80vw;
+            height: 20rem;
+            font-size: 40px;
+            text-align: center;
+            color: hsla(0, 50%, 0%, .8);
+            position: fixed;
+            bottom: 20rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="main" width="500" height="500"></canvas>
+    <script src="dist/main.js"></script>
+</body>
+
+</html>
